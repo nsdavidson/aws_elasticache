@@ -1,4 +1,4 @@
-name             'aws-elasticache'
+name             'aws_elasticache'
 maintainer       'Nolan Davidson'
 maintainer_email 'nolan.davidson@gmail.com'
 license          'All rights reserved'

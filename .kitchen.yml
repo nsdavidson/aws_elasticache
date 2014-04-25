@@ -11,5 +11,5 @@ platforms:
 suites:
   - name: default
     run_list:
-    - recipe[aws-elasticache::default]
+    - recipe[aws_elasticache::test]
     attributes:
