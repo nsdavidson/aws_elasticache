@@ -61,7 +61,7 @@ module NDAwsLibs
       end
 
       def set_node_attribs(resource)
-        get_cluster_info(resource.cache_cluster_id).cluster.each do |cluster|
+        get_cluster_info(resource.cache_cluster_id).cache_clusters.each do |cluster|
           node.override[:aws_elasticache][cluster.cache_cluster_id][:configuration_endpoint] = cluster.configuration_endpoint
           cluster.cache_nodes.endpoint.each do |ep|
             node.override[:aws_elasticache][cluster.cache_cluster_id][:nodes] << "#{ep.address}:#{ep.port}"
