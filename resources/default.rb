@@ -14,3 +14,4 @@ attribute :cache_subnet_group_name, kind_of: String, required: true
 attribute :security_group_ids, kind_of: Array, required: true
 attribute :port, kind_of: Integer, required: true
 attribute :auto_minor_version_upgrade, kind_of: [TrueClass, FalseClass], default: false
+attribute :store_in_etcd, kind_of: [TrueClass, FalseClass], default:false

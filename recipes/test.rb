@@ -12,4 +12,5 @@ aws_elasticache "chef-test" do
   port 11211
   num_cache_nodes 1
   auto_minor_version_upgrade true
+  store_in_etcd true
 end
