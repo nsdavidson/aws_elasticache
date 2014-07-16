@@ -15,6 +15,8 @@ action :create do
       Chef::Log.info "Created #{@new_resource.cache_cluster_id}."
       set_node_attribs(@new_resource)
       if @new_resource.store_in_etcd
+        require 'chef/etcd'
+        Chef::Config[:etcd] = {host:"snkxm-ndavidson.sn.corp", port: 4001}
         get_cluster_info(@new_resource.cache_cluster_id).each do |cluster|
           etcd "/aws_elasticache/#{cluster.cache_cluster_id}/configuration_endpoint" do
             action :set
