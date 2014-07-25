@@ -1,5 +1,3 @@
-
-
 module NDAwsLibs
   module AWS
     module ElastiCache
