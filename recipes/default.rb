@@ -8,8 +8,8 @@
 #
 
 chef_gem "aws-sdk-core" do
-  options("--pre")
-  version "2.0.0.rc6"
+  action :install
+  version "2.0.18"
 end
 
 require 'aws-sdk-core'
