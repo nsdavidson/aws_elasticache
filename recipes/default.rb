@@ -8,7 +8,7 @@
 #
 
 chef_gem "aws-sdk-core" do
-  options("--pre")
+  action :install
   version "2.0.18"
 end
 
