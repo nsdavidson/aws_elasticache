@@ -16,6 +16,7 @@ module NDAwsLibs
 
       def ec_connection(key = new_resource.aws_access_key, secret = new_resource.aws_secret_access_key, region = new_resource.region)
         begin
+          gem 'aws-sdk-core', '=2.0.18'
           require "aws-sdk-core"
         rescue LoadError
           Chef::Log.error("Missing gem aws-sdk-core.  Apply aws-elasticache::default to install it.")
