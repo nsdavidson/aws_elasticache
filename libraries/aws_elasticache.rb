@@ -20,7 +20,7 @@ module NDAwsLibs
         rescue LoadError
           Chef::Log.error("Missing gem aws-sdk-core.  Apply aws-elasticache::default to install it.")
         end
-        @ec_conn ||= Aws::ElastiCache::Client.new(access_key_id: key, secret_access_key: secret)
+        @ec_conn ||= Aws::ElastiCache::Client.new(access_key_id: key, secret_access_key: secret, region: region)
       end
 
       def cluster_exists?(cluster_id)
